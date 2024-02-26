@@ -18,10 +18,20 @@ app.use(bodyParser.urlencoded({ extended: true }));
 //Create an Http Server onTop of the Express App
 const server = http.createServer(app);
 
+//Trip Data
+    // Data from the Trip           -    [cordinates and stuff]
+    // Start Time                   -    9:00am
+    // End Time                     -    5:00pm
+    // Number of Stops              -    5 stops
+    // Trip Date                    -    12/10/2023
+    // Trip Notes                   -    "test Notes"
+    // Planned Activities           -    ["phoneCall", "sales"]
+
+
 //Create Server Connection
 const io = socketio(server, {
     cors: {
-      origin: ["http://192.168.93.145:3001"],
+      origin: ["http://127.0.0.1:3001"],
       // credentials: true,
       // methods: ["GET", "POST"],
       // transports: ["websocket", "polling"],
