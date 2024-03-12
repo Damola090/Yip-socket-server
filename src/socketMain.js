@@ -69,6 +69,7 @@ io.on("connection", (socket) => {
 
   //Server-Socket listen for "TripData" Event emitted from "client-socket"
   socket.on("tripData", (data) => {
+    console.log("trip data from mobile", data)
     io.to("web_ui").emit("data", data);
   });
 
