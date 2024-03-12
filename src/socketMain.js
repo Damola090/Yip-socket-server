@@ -38,7 +38,7 @@ const io = socketio(server, {
   },
 });
 
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 8081;
 
 server.listen(PORT, () => {
   console.log(`Socket.io Server is running on port ${PORT}`);
@@ -104,4 +104,4 @@ io.on("connection", (socket) => {
 //   });
 // }
 
-module.exports = socketMain;
+// module.exports = socketMain;
