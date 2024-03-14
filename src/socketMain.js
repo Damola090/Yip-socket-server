@@ -31,7 +31,7 @@ const server = http.createServer(app);
 const io = socketio(server, {
   cors: {
     // origin: ["http://127.0.0.1:3001"],
-    origin: ["http://192.168.218.145:3001"],
+    origin: ["http://192.168.218.145:3001", "http://127.0.0.1:3001"],
     // credentials: true,
     // methods: ["GET", "POST"],
     // transports: ["websocket", "polling"],
@@ -74,7 +74,6 @@ io.on("connection", (socket) => {
 
   //Server-Socket listen for "TripData" Event emitted from "client-socket"
   socket.on("tripData", (data) => {
-    console.log("trip data from mobile", data);
     io.to("web_ui").emit("data", data);
   });
 
