@@ -34,9 +34,9 @@ const io = socketio(server, {
     origin: [
       "https://fieldskawd.ctng.biz/", "http://127.0.0.1:3001",
     ],
-    credentials: true,
-    methods: ["GET", "POST"],
-    transports: ["websocket", "polling"],
+    // credentials: true,
+    // methods: ["GET", "POST"],
+    // transports: ["websocket", "polling"],
   },
 });
 
