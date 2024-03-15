@@ -32,9 +32,9 @@ const io = socketio(server, {
   cors: {
     // origin: ["http://127.0.0.1:3001"],
     origin: ["http://192.168.218.145:3001", "http://127.0.0.1:3001"],
-    // credentials: true,
-    // methods: ["GET", "POST"],
-    // transports: ["websocket", "polling"],
+    credentials: true,
+    methods: ["GET", "POST"],
+    transports: ["websocket", "polling"],
   },
 });
 
