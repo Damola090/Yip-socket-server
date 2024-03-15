@@ -31,17 +31,20 @@ const server = http.createServer(app);
 const io = socketio(server, {
   cors: {
     // origin: ["http://127.0.0.1:3001"],
-    origin: ["http://192.168.218.145:3001", "http://127.0.0.1:3001"],
-    // credentials: true,
-    // methods: ["GET", "POST"],
-    // transports: ["websocket", "polling"],
+    origin: [
+      "https://fieldskawd.ctng.biz/",
+      "http://192.168.218.145:3001",
+      "http://127.0.0.1:3001",
+    ],
+    credentials: true,
+    methods: ["GET", "POST"],
+    transports: ["websocket", "polling"],
   },
 });
 
-const PORT = process.env.PORT || 3001;
+const PORT = 3001;
 
 // "http://127.0.0.1:3001"
-
 
 console.log(PORT, "test");
 
